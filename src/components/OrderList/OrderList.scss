@@ -1,0 +1,48 @@
+@import "../../style/colors.scss";
+
+.order-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  color: $text-primary;
+
+  .titles,
+  .order {
+    padding: 5px 40px;
+    display: flex;
+    gap: 10px;
+    > span {
+      flex: 1;
+      text-align: right;
+    }
+
+    &.buy {
+      flex-direction: row-reverse;
+      .price {
+        color: $green-color;
+      }
+    }
+
+    &.sell .price {
+      color: $red-color;
+    }
+  }
+
+  .titles {
+    color: $text-secondary;
+    font-weight: 700;
+    border-bottom: 1px solid $border-color;
+  }
+
+  @media (max-width: 500px) {
+    .order.buy {
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .order-list.reverse {
+    flex-direction: column-reverse;
+  }
+}
