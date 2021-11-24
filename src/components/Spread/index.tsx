@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       display: "flex",
+      height: "25px",
       alignItems: "center",
       justifyContent: "center",
       gap: "5px",

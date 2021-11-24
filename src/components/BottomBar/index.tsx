@@ -5,7 +5,8 @@ import { useFeed } from "../../contexts/feed.context";
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
-      minHeight: "60px",
+      maxHeight: "60px",
+      padding: "10px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
