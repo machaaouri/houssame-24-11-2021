@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   root: {
     maxHeight: "50px",
     display: "flex",
-    padding: "5px 15px",
+    padding: "0px 15px",
     borderBottom: "1.5px solid #434651",
     justifyContent: "space-between",
     alignItems: "center",

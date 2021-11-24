@@ -6,7 +6,7 @@ const useStyles = makeStyles(() =>
   createStyles({
     root: {
       maxHeight: "60px",
-      padding: "10px",
+      padding: "5px 10px",
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
