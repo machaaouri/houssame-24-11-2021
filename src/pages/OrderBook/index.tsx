@@ -11,18 +11,17 @@ import { getMaxRows, getTotal, rowHeight } from "../../utils/orderbook.utils";
 const titles = ["PRICE", "SIZE", "TOTAL"];
 
 export const OrderBook = () => {
-  const ref = useRef<HTMLDivElement>(null);
   const isMobile = useMediaQuery({ maxWidth: 500 });
   const [height, setHeight] = useState(0);
   const { orders, status } = useFeed();
   const { bids, asks } = orders;
 
   const newHeight = useCallback(() => {
-    setHeight(ref.current?.clientHeight || 0);
+    setHeight(document.documentElement?.getBoundingClientRect().height || 0);
   }, [setHeight]);
 
   useEffect(() => {
-    setHeight(ref.current?.clientHeight || 0);
+    setHeight(document.documentElement?.getBoundingClientRect().height || 0);
     window.addEventListener("resize", newHeight);
     return () => {
       window.removeEventListener("resize", newHeight);
@@ -37,7 +36,7 @@ export const OrderBook = () => {
   const total = getTotal(bidOrders, askOrders);
 
   return (
-    <div className="order-book" ref={ref}>
+    <div className="order-book">
       <TopBar title="Order Book">
         {!isMobile && <Spread bid={bids[0]} ask={asks[0]} />}
       </TopBar>
