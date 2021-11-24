@@ -22,5 +22,6 @@ export const getMaxRows = (
   let max = Math.max(bidsLength, asksLlength);
   let n = 0;
   while (n < max && n * rowHeight < listHeight) ++n;
-  return (max = n - (isMobile ? 2 /** titles + spread */ : 0));
+  return (max =
+    n - (isMobile ? 2 /** titles + spread */ : 1) /* just titles */);
 };
