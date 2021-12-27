@@ -31,7 +31,7 @@ steps:
         "orderbook=gcr.io/$PROJECT_ID/orderbook:$TAG_NAME",
       ]
     env:
-      - "CLOUDSDK_COMPUTE_ZONE=<europe-central2-c"
+      - "CLOUDSDK_COMPUTE_ZONE=europe-central2-c"
       - "CLOUDSDK_CONTAINER_CLUSTER=deploy-cicd"
 # push images to Google Container Registry with tags
 images:
