@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: orderbook-service
+  labels:
+    app: orderbook-service
+spec:
+  selector:
+    app: orderbook
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 3000

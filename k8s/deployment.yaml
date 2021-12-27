@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orderbook-deployment
+  namespace: default
+spec:
+  selector:
+    matchLabels:
+      app: orderbook
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: orderbook
+    spec:
+      containers:
+        - name: orderbook
+          image: gcr.io/neon-net-327611/orderbook:latest
+          ports:
+            - containerPort: 3000
+          readinessProbe:
+            httpGet:
+              scheme: HTTP
+              path: /index.html
+              port: 3000
+            initialDelaySeconds: 10
+            periodSeconds: 5
