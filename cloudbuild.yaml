@@ -36,6 +36,6 @@ steps:
 # push images to Google Container Registry with tags
 images:
   [
-    "gcr.io/$PROJECT_ID/<app-name>:$TAG_NAME",
-    "gcr.io/$PROJECT_ID/<app-name>:latest",
+    "gcr.io/$PROJECT_ID/orderbook:$TAG_NAME",
+    "gcr.io/$PROJECT_ID/orderbook:latest",
   ]
