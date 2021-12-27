@@ -14,8 +14,8 @@ spec:
         app: orderbook
     spec:
       containers:
-        - name: orderbook
-          image: gcr.io/neon-net-327611/orderbook:latest
+        - image: gcr.io/neon-net-327611/orderbook:latest
+          name: orderbook
           ports:
             - containerPort: 3000
           readinessProbe:
