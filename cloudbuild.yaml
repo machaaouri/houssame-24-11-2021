@@ -27,7 +27,7 @@ steps:
         "set",
         "image",
         "deployment",
-        "orderbook",
+        "orderbook-deployment",
         "orderbook=gcr.io/$PROJECT_ID/orderbook:$TAG_NAME",
       ]
     env:
