@@ -73,8 +73,8 @@ export const format = numberFormatter({
 
 export const priceFormat = numberFormatter({
   format: "default",
-  precision: 2,
-  minPrecision: 2,
+  precision: 3,
+  minPrecision: 3,
   fractionSeparator: ".",
   thousandSeparator: ",",
 });
